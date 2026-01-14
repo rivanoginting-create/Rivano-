@@ -1,0 +1,40 @@
+Router>enable
+Router#conf t
+Router(config)#hostname BALI
+BALI(config)#int fa0/1
+BALI(config-if)#ip add 10.10.10.1 255.255.255.0
+BALI(config-if)#no sh
+BALI(config-if)#int fa0/0
+BALI(config-if)#ip add 192.168.10.1 255.255.255.0
+BALI(config-if)#no sh
+Setting ROUTER JAKARTA
+Router>enable
+Router#conf t
+Router(config)#hostname JAKARTA
+JAKARTA(config)#int fa0/1
+JAKARTA(config-if)#ip add 10.10.10.2 255.255.255.0
+JAKARTA(config-if)#no sh
+JAKARTA(config-if)#int fa1/0
+
+Router>enable
+Router#conf t
+Router(config)#hostname JAKARTA
+JAKARTA(config)#int fa0/1
+JAKARTA(config-if)#ip add 10.10.10.2 255.255.255.0
+JAKARTA(config-if)#no sh
+JAKARTA(config-if)#int fa1/0
+JAKARTA(config-if)#ip add 20.20.20.1 255.255.255.0
+JAKARTA(config-if)#no sh
+JAKARTA(config-if)#int fa0/0
+JAKARTA(config-if)#ip add 192.168.20.1 255.255.255.0
+JAKARTA(config-if)#no sh
+
+Router>enable
+Router#conf t
+Router(config)#hostname MANADO
+MANADO(config)#int fa0/1
+MANADO(config-if)#ip add 20.20.20.2 255.255.255.0
+MANADO(config-if)#no sh
+MANADO(config-if)#int fa0/0
+MANADO(config-if)#ip add 192.168.30.1 255.255.255.0
+MANADO(config-if)#no sh
